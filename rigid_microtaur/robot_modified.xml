@@ -1,0 +1,528 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="rigid_microtaur_rm">
+  <compiler angle="radian" meshdir="assets" autolimits="true" />
+  <default>
+    <default class="rigid_microtaur_rm">
+      <joint frictionloss="0.1" armature="0.005" />
+      <position kp="50" dampratio="1" />
+      <default class="visual_rm">
+        <geom type="mesh" contype="0" conaffinity="0" group="2" />
+      </default>
+      <default class="collision_rm">
+        <geom group="3" />
+      </default>
+    </default>
+  </default>
+  <worldbody>
+    
+    <body name="battery_rm" pos="0 0.2 0.2" quat="1 0 0 0" childclass="rigid_microtaur_rm">
+      <freejoint name="battery_freejoint" />
+      <inertial pos="0.00712956 2.57477e-06 0.0143935" mass="0.604639" fullinertia="0.000493478 0.0038327 0.00417304 -1.99349e-07 -3.21496e-05 1.69012e-08" />
+      
+      <geom type="mesh" class="visual_rm" pos="0.107073 -0.04296 -0.004" quat="0 0 0.707107 0.707107" mesh="rigid_microtaur_base_rm" material="rigid_microtaur_base_material_rm" />
+      <geom type="mesh" class="collision_rm" pos="0.107073 -0.04296 -0.004" quat="0 0 0.707107 0.707107" mesh="rigid_microtaur_base_rm" material="rigid_microtaur_base_material_rm" />
+      
+      <geom type="mesh" class="visual_rm" pos="0.102073 0.0085 2.42373e-16" quat="0 0 0.707107 0.707107" mesh="battery_rm" material="battery_material_rm" />
+      <geom type="mesh" class="collision_rm" pos="0.102073 0.0085 2.42373e-16" quat="0 0 0.707107 0.707107" mesh="battery_rm" material="battery_material_rm" />
+      
+      <geom type="mesh" class="visual_rm" pos="-0.0947269 0.03646 0.0095" quat="0.707107 -0.707107 -6.66134e-16 7.67873e-16" mesh="dc15_a01_case_m_dummy_stp_rm" material="dc15_a01_case_m_dummy_stp_material_rm" />
+      <geom type="mesh" class="collision_rm" pos="-0.0947269 0.03646 0.0095" quat="0.707107 -0.707107 -6.66134e-16 7.67873e-16" mesh="dc15_a01_case_m_dummy_stp_rm" material="dc15_a01_case_m_dummy_stp_material_rm" />
+      
+      <geom type="mesh" class="visual_rm" pos="-0.0947269 0.03646 0.0095" quat="0.707107 -0.707107 -6.66134e-16 7.67873e-16" mesh="dc15_a01_case_f_dummy_stp_rm" material="dc15_a01_case_f_dummy_stp_material_rm" />
+      <geom type="mesh" class="collision_rm" pos="-0.0947269 0.03646 0.0095" quat="0.707107 -0.707107 -6.66134e-16 7.67873e-16" mesh="dc15_a01_case_f_dummy_stp_rm" material="dc15_a01_case_f_dummy_stp_material_rm" />
+      
+      <geom type="mesh" class="visual_rm" pos="-0.0947269 0.01696 0.0095" quat="0.707107 -0.707107 -6.66134e-16 7.67873e-16" mesh="xl_xc_330_stp_1_rm" material="xl_xc_330_stp_1_material_rm" />
+      <geom type="mesh" class="collision_rm" pos="-0.0947269 0.01696 0.0095" quat="0.707107 -0.707107 -6.66134e-16 7.67873e-16" mesh="xl_xc_330_stp_1_rm" material="xl_xc_330_stp_1_material_rm" />
+      
+      <geom type="mesh" class="visual_rm" pos="0.0733231 -0.03646 0.0095" quat="5.55112e-17 6.58718e-17 -0.707107 0.707107" mesh="dc15_a01_case_m_dummy_stp_rm" material="dc15_a01_case_m_dummy_stp_material_rm" />
+      <geom type="mesh" class="collision_rm" pos="0.0733231 -0.03646 0.0095" quat="5.55112e-17 6.58718e-17 -0.707107 0.707107" mesh="dc15_a01_case_m_dummy_stp_rm" material="dc15_a01_case_m_dummy_stp_material_rm" />
+      
+      <geom type="mesh" class="visual_rm" pos="0.0733231 -0.03646 0.0095" quat="5.55112e-17 6.58718e-17 -0.707107 0.707107" mesh="dc15_a01_case_f_dummy_stp_rm" material="dc15_a01_case_f_dummy_stp_material_rm" />
+      <geom type="mesh" class="collision_rm" pos="0.0733231 -0.03646 0.0095" quat="5.55112e-17 6.58718e-17 -0.707107 0.707107" mesh="dc15_a01_case_f_dummy_stp_rm" material="dc15_a01_case_f_dummy_stp_material_rm" />
+      
+      <geom type="mesh" class="visual_rm" pos="0.0733231 -0.01696 0.0095" quat="5.55112e-17 6.58718e-17 -0.707107 0.707107" mesh="xl_xc_330_stp_1_rm" material="xl_xc_330_stp_1_material_rm" />
+      <geom type="mesh" class="collision_rm" pos="0.0733231 -0.01696 0.0095" quat="5.55112e-17 6.58718e-17 -0.707107 0.707107" mesh="xl_xc_330_stp_1_rm" material="xl_xc_330_stp_1_material_rm" />
+      
+      <geom type="mesh" class="visual_rm" pos="-0.0742269 -0.03646 0.0095" quat="2.22045e-16 -2.4373e-17 0.707107 -0.707107" mesh="dc15_a01_case_m_dummy_stp_rm" material="dc15_a01_case_m_dummy_stp_material_rm" />
+      <geom type="mesh" class="collision_rm" pos="-0.0742269 -0.03646 0.0095" quat="2.22045e-16 -2.4373e-17 0.707107 -0.707107" mesh="dc15_a01_case_m_dummy_stp_rm" material="dc15_a01_case_m_dummy_stp_material_rm" />
+      
+      <geom type="mesh" class="visual_rm" pos="-0.0742269 -0.03646 0.0095" quat="2.22045e-16 -2.4373e-17 0.707107 -0.707107" mesh="dc15_a01_case_f_dummy_stp_rm" material="dc15_a01_case_f_dummy_stp_material_rm" />
+      <geom type="mesh" class="collision_rm" pos="-0.0742269 -0.03646 0.0095" quat="2.22045e-16 -2.4373e-17 0.707107 -0.707107" mesh="dc15_a01_case_f_dummy_stp_rm" material="dc15_a01_case_f_dummy_stp_material_rm" />
+      
+      <geom type="mesh" class="visual_rm" pos="-0.0742269 -0.01696 0.0095" quat="2.22045e-16 -2.4373e-17 0.707107 -0.707107" mesh="xl_xc_330_stp_1_rm" material="xl_xc_330_stp_1_material_rm" />
+      <geom type="mesh" class="collision_rm" pos="-0.0742269 -0.01696 0.0095" quat="2.22045e-16 -2.4373e-17 0.707107 -0.707107" mesh="xl_xc_330_stp_1_rm" material="xl_xc_330_stp_1_material_rm" />
+      
+      <geom type="mesh" class="visual_rm" pos="0.0940731 -0.03646 0.0095" quat="0 0 0.707107 -0.707107" mesh="dc15_a01_case_m_dummy_stp_rm" material="dc15_a01_case_m_dummy_stp_material_rm" />
+      <geom type="mesh" class="collision_rm" pos="0.0940731 -0.03646 0.0095" quat="0 0 0.707107 -0.707107" mesh="dc15_a01_case_m_dummy_stp_rm" material="dc15_a01_case_m_dummy_stp_material_rm" />
+      
+      <geom type="mesh" class="visual_rm" pos="0.0940731 -0.03646 0.0095" quat="0 0 0.707107 -0.707107" mesh="dc15_a01_case_f_dummy_stp_rm" material="dc15_a01_case_f_dummy_stp_material_rm" />
+      <geom type="mesh" class="collision_rm" pos="0.0940731 -0.03646 0.0095" quat="0 0 0.707107 -0.707107" mesh="dc15_a01_case_f_dummy_stp_rm" material="dc15_a01_case_f_dummy_stp_material_rm" />
+      
+      <geom type="mesh" class="visual_rm" pos="0.0940731 -0.01696 0.0095" quat="0 0 0.707107 -0.707107" mesh="xl_xc_330_stp_1_rm" material="xl_xc_330_stp_1_material_rm" />
+      <geom type="mesh" class="collision_rm" pos="0.0940731 -0.01696 0.0095" quat="0 0 0.707107 -0.707107" mesh="xl_xc_330_stp_1_rm" material="xl_xc_330_stp_1_material_rm" />
+      
+      <geom type="mesh" class="visual_rm" pos="0.0940731 0.03646 0.0095" quat="0.707107 -0.707107 1.11022e-16 1.47196e-16" mesh="dc15_a01_case_m_dummy_stp_rm" material="dc15_a01_case_m_dummy_stp_material_rm" />
+      <geom type="mesh" class="collision_rm" pos="0.0940731 0.03646 0.0095" quat="0.707107 -0.707107 1.11022e-16 1.47196e-16" mesh="dc15_a01_case_m_dummy_stp_rm" material="dc15_a01_case_m_dummy_stp_material_rm" />
+      
+      <geom type="mesh" class="visual_rm" pos="0.0940731 0.03646 0.0095" quat="0.707107 -0.707107 1.11022e-16 1.47196e-16" mesh="dc15_a01_case_f_dummy_stp_rm" material="dc15_a01_case_f_dummy_stp_material_rm" />
+      <geom type="mesh" class="collision_rm" pos="0.0940731 0.03646 0.0095" quat="0.707107 -0.707107 1.11022e-16 1.47196e-16" mesh="dc15_a01_case_f_dummy_stp_rm" material="dc15_a01_case_f_dummy_stp_material_rm" />
+      
+      <geom type="mesh" class="visual_rm" pos="0.0940731 0.01696 0.0095" quat="0.707107 -0.707107 1.11022e-16 1.47196e-16" mesh="xl_xc_330_stp_1_rm" material="xl_xc_330_stp_1_material_rm" />
+      <geom type="mesh" class="collision_rm" pos="0.0940731 0.01696 0.0095" quat="0.707107 -0.707107 1.11022e-16 1.47196e-16" mesh="xl_xc_330_stp_1_rm" material="xl_xc_330_stp_1_material_rm" />
+      
+      <geom type="mesh" class="visual_rm" pos="-0.0684269 0.0003 0.011" quat="0.5 0.5 -0.5 -0.5" mesh="arduino_mkr1000_part_rm" material="arduino_mkr1000_part_material_rm" />
+      <geom type="mesh" class="collision_rm" pos="-0.0684269 0.0003 0.011" quat="0.5 0.5 -0.5 -0.5" mesh="arduino_mkr1000_part_rm" material="arduino_mkr1000_part_material_rm" />
+      
+      <geom type="mesh" class="visual_rm" pos="0.0733231 0.03646 0.0095" quat="0.707107 -0.707107 1.11022e-16 1.47196e-16" mesh="dc15_a01_case_m_dummy_stp_rm" material="dc15_a01_case_m_dummy_stp_material_rm" />
+      <geom type="mesh" class="collision_rm" pos="0.0733231 0.03646 0.0095" quat="0.707107 -0.707107 1.11022e-16 1.47196e-16" mesh="dc15_a01_case_m_dummy_stp_rm" material="dc15_a01_case_m_dummy_stp_material_rm" />
+      
+      <geom type="mesh" class="visual_rm" pos="0.0733231 0.03646 0.0095" quat="0.707107 -0.707107 1.11022e-16 1.47196e-16" mesh="dc15_a01_case_f_dummy_stp_rm" material="dc15_a01_case_f_dummy_stp_material_rm" />
+      <geom type="mesh" class="collision_rm" pos="0.0733231 0.03646 0.0095" quat="0.707107 -0.707107 1.11022e-16 1.47196e-16" mesh="dc15_a01_case_f_dummy_stp_rm" material="dc15_a01_case_f_dummy_stp_material_rm" />
+      
+      <geom type="mesh" class="visual_rm" pos="0.0733231 0.01696 0.0095" quat="0.707107 -0.707107 1.11022e-16 1.47196e-16" mesh="xl_xc_330_stp_1_rm" material="xl_xc_330_stp_1_material_rm" />
+      <geom type="mesh" class="collision_rm" pos="0.0733231 0.01696 0.0095" quat="0.707107 -0.707107 1.11022e-16 1.47196e-16" mesh="xl_xc_330_stp_1_rm" material="xl_xc_330_stp_1_material_rm" />
+      
+      <geom type="mesh" class="visual_rm" pos="-0.0742269 0.03646 0.0095" quat="0.707107 -0.707107 1.11022e-16 -1.86448e-16" mesh="dc15_a01_case_m_dummy_stp_rm" material="dc15_a01_case_m_dummy_stp_material_rm" />
+      <geom type="mesh" class="collision_rm" pos="-0.0742269 0.03646 0.0095" quat="0.707107 -0.707107 1.11022e-16 -1.86448e-16" mesh="dc15_a01_case_m_dummy_stp_rm" material="dc15_a01_case_m_dummy_stp_material_rm" />
+      
+      <geom type="mesh" class="visual_rm" pos="-0.0742269 0.03646 0.0095" quat="0.707107 -0.707107 1.11022e-16 -1.86448e-16" mesh="dc15_a01_case_f_dummy_stp_rm" material="dc15_a01_case_f_dummy_stp_material_rm" />
+      <geom type="mesh" class="collision_rm" pos="-0.0742269 0.03646 0.0095" quat="0.707107 -0.707107 1.11022e-16 -1.86448e-16" mesh="dc15_a01_case_f_dummy_stp_rm" material="dc15_a01_case_f_dummy_stp_material_rm" />
+      
+      <geom type="mesh" class="visual_rm" pos="-0.0742269 0.01696 0.0095" quat="0.707107 -0.707107 1.11022e-16 -1.86448e-16" mesh="xl_xc_330_stp_1_rm" material="xl_xc_330_stp_1_material_rm" />
+      <geom type="mesh" class="collision_rm" pos="-0.0742269 0.01696 0.0095" quat="0.707107 -0.707107 1.11022e-16 -1.86448e-16" mesh="xl_xc_330_stp_1_rm" material="xl_xc_330_stp_1_material_rm" />
+      
+      <geom type="mesh" class="visual_rm" pos="-0.0947269 -0.03646 0.0095" quat="2.45327e-17 1.66533e-16 -0.707107 0.707107" mesh="dc15_a01_case_m_dummy_stp_rm" material="dc15_a01_case_m_dummy_stp_material_rm" />
+      <geom type="mesh" class="collision_rm" pos="-0.0947269 -0.03646 0.0095" quat="2.45327e-17 1.66533e-16 -0.707107 0.707107" mesh="dc15_a01_case_m_dummy_stp_rm" material="dc15_a01_case_m_dummy_stp_material_rm" />
+      
+      <geom type="mesh" class="visual_rm" pos="-0.0947269 -0.03646 0.0095" quat="2.45327e-17 1.66533e-16 -0.707107 0.707107" mesh="dc15_a01_case_f_dummy_stp_rm" material="dc15_a01_case_f_dummy_stp_material_rm" />
+      <geom type="mesh" class="collision_rm" pos="-0.0947269 -0.03646 0.0095" quat="2.45327e-17 1.66533e-16 -0.707107 0.707107" mesh="dc15_a01_case_f_dummy_stp_rm" material="dc15_a01_case_f_dummy_stp_material_rm" />
+      
+      <geom type="mesh" class="visual_rm" pos="-0.0947269 -0.01696 0.0095" quat="2.45327e-17 1.66533e-16 -0.707107 0.707107" mesh="xl_xc_330_stp_1_rm" material="xl_xc_330_stp_1_material_rm" />
+      <geom type="mesh" class="collision_rm" pos="-0.0947269 -0.01696 0.0095" quat="2.45327e-17 1.66533e-16 -0.707107 0.707107" mesh="xl_xc_330_stp_1_rm" material="xl_xc_330_stp_1_material_rm" />
+      
+      <body name="v2_leglink1_inner_screws_rm" pos="-0.0947269 -0.04296 0.0095" quat="0.653281 -0.653281 -0.270598 -0.270598">
+        
+        <joint axis="0 0 1" name="leg1_a_joint_act_rm" type="hinge" />
+        <inertial pos="-0.0218921 8.56683e-15 -0.00362298" mass="0.00538952" fullinertia="1.13867e-07 1.73131e-06 1.82783e-06 1.13351e-18 -4.44987e-08 1.74335e-20" />
+        
+        <geom type="mesh" class="visual_rm" pos="2.08167e-17 -1.38778e-17 -0.0055" quat="0.707107 0.707107 0 1.0699e-17" mesh="v2_leglink1_inner_screws_rm" material="v2_leglink1_inner_screws_material_rm" />
+        <geom type="mesh" class="collision_rm" pos="2.08167e-17 -1.38778e-17 -0.0055" quat="0.707107 0.707107 0 1.0699e-17" mesh="v2_leglink1_inner_screws_rm" material="v2_leglink1_inner_screws_material_rm" />
+        
+        <geom type="mesh" class="visual_rm" pos="-0.0464129 1.1556e-13 -0.004" quat="0.341383 -1.29945e-15 -5.55112e-16 -0.939924" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+        <geom type="mesh" class="collision_rm" pos="-0.0464129 1.1556e-13 -0.004" quat="0.341383 -1.29945e-15 -5.55112e-16 -0.939924" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+        
+        <geom type="mesh" class="visual_rm" pos="-0.0464129 1.1556e-13 -0.004" quat="0.341383 -1.29945e-15 -5.55112e-16 -0.939924" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+        <geom type="mesh" class="collision_rm" pos="-0.0464129 1.1556e-13 -0.004" quat="0.341383 -1.29945e-15 -5.55112e-16 -0.939924" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+        
+        <body name="spacer_for_legs_rm" pos="-0.0464129 -5.55112e-17 -0.0055" quat="0.446794 5.42477e-17 2.77556e-16 -0.894637">
+          
+          <joint axis="0 0 1" name="leg1_b_joint_rm" type="hinge" />
+          <inertial pos="-0.0199339 -0.0195715 -0.00386642" mass="0.00618952" fullinertia="2.2673e-06 2.34732e-06 4.58653e-06 -2.18038e-06 -7.81718e-08 -7.67506e-08" />
+          
+          <geom type="mesh" class="visual_rm" pos="0 6.93889e-18 0" quat="0.707107 -0.707107 -0 5.81871e-18" mesh="spacer_for_legs_rm" material="spacer_for_legs_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="0 6.93889e-18 0" quat="0.707107 -0.707107 -0 5.81871e-18" mesh="spacer_for_legs_rm" material="spacer_for_legs_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="-0.0252709 -0.0248115 -0.006" quat="0.654516 0.654516 0.267599 0.267599" mesh="leglink2_v2_rm" material="leglink2_v2_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="-0.0252709 -0.0248115 -0.006" quat="0.654516 0.654516 0.267599 0.267599" mesh="leglink2_v2_rm" material="leglink2_v2_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="9.71445e-17 1.38778e-16 -0.0045" quat="0.999939 -3.12562e-15 -1.44329e-15 -0.011035" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="9.71445e-17 1.38778e-16 -0.0045" quat="0.999939 -3.12562e-15 -1.44329e-15 -0.011035" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="9.71445e-17 1.38778e-16 -0.0045" quat="0.999939 -3.12562e-15 -1.44329e-15 -0.011035" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="9.71445e-17 1.38778e-16 -0.0045" quat="0.999939 -3.12562e-15 -1.44329e-15 -0.011035" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="1.38778e-17 3.33067e-16 -0.0015" quat="0.999939 -3.12562e-15 -1.44329e-15 -0.011035" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="1.38778e-17 3.33067e-16 -0.0015" quat="0.999939 -3.12562e-15 -1.44329e-15 -0.011035" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="1.38778e-17 3.33067e-16 -0.0015" quat="0.999939 -3.12562e-15 -1.44329e-15 -0.011035" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="1.38778e-17 3.33067e-16 -0.0015" quat="0.999939 -3.12562e-15 -1.44329e-15 -0.011035" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="-0.0505419 -0.049623 -0.0045" quat="0.999939 -3.12562e-15 -1.44329e-15 -0.011035" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="-0.0505419 -0.049623 -0.0045" quat="0.999939 -3.12562e-15 -1.44329e-15 -0.011035" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="-0.0505419 -0.049623 -0.0045" quat="0.999939 -3.12562e-15 -1.44329e-15 -0.011035" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="-0.0505419 -0.049623 -0.0045" quat="0.999939 -3.12562e-15 -1.44329e-15 -0.011035" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+          
+          <site group="3" name="closing_leg1_c_joint_2_rm" pos="-0.0505419 -0.049623 -0.003" quat="1.38134e-15 0.922115 -0.386917 4.13718e-16" />
+          
+          <site group="3" name="closing_leg1_c_joint_2_z_rm" pos="-0.0505419 -0.049623 -0.103" quat="1.38134e-15 0.922115 -0.386917 4.13718e-16" />
+        </body>
+      </body>
+      
+      <body name="v2_leglink1_inner_screws_2_rm" pos="-0.0742269 -0.04296 0.0095" quat="0.270598 -0.270598 -0.653281 -0.653281">
+        
+        <joint axis="0 0 1" name="leg1_e_joint_act_rm" type="hinge" />
+        <inertial pos="-0.0218921 -6.57227e-17 -0.00362298" mass="0.00538952" fullinertia="1.13867e-07 1.73131e-06 1.82783e-06 -9.00268e-21 -4.44987e-08 -1.38904e-22" />
+        
+        <geom type="mesh" class="visual_rm" pos="-6.93889e-18 0 -0.0055" quat="0.707107 0.707107 -0 2.20026e-19" mesh="v2_leglink1_inner_screws_rm" material="v2_leglink1_inner_screws_material_rm" />
+        <geom type="mesh" class="collision_rm" pos="-6.93889e-18 0 -0.0055" quat="0.707107 0.707107 -0 2.20026e-19" mesh="v2_leglink1_inner_screws_rm" material="v2_leglink1_inner_screws_material_rm" />
+        
+        <geom type="mesh" class="visual_rm" pos="-0.0464129 -9.15934e-16 -0.004" quat="0.956369 1.41959e-16 -3.33067e-16 -0.292161" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+        <geom type="mesh" class="collision_rm" pos="-0.0464129 -9.15934e-16 -0.004" quat="0.956369 1.41959e-16 -3.33067e-16 -0.292161" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+        
+        <geom type="mesh" class="visual_rm" pos="-0.0464129 -9.15934e-16 -0.004" quat="0.956369 1.41959e-16 -3.33067e-16 -0.292161" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+        <geom type="mesh" class="collision_rm" pos="-0.0464129 -9.15934e-16 -0.004" quat="0.956369 1.41959e-16 -3.33067e-16 -0.292161" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+        
+        <body name="leglink2_v2_with_leg_down_rm" pos="-0.0464129 -1.38778e-17 -0.0055" quat="1 0 2.65236e-17 2.22045e-16">
+          
+          <joint axis="0 0 1" name="leg1_d_joint_rm" type="hinge" />
+          <inertial pos="-0.00586077 -0.0397385 -0.0015" mass="0.00533592" fullinertia="4.0887e-06 2.21685e-07 4.29791e-06 -6.59411e-07 4.82114e-22 4.29292e-21" />
+          
+          <geom type="mesh" class="visual_rm" pos="-0.00465373 -0.035108 -0.003" quat="0.465992 0.465992 -0.531838 -0.531838" mesh="leglink2_v2_with_leg_down_rm" material="leglink2_v2_with_leg_down_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="-0.00465373 -0.035108 -0.003" quat="0.465992 0.465992 -0.531838 -0.531838" mesh="leglink2_v2_with_leg_down_rm" material="leglink2_v2_with_leg_down_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="-0.0190339 -0.0827042 -0.0015" quat="0.634046 0.313026 0.634046 -0.313026" mesh="foot_rm" material="foot_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="-0.0190339 -0.0827042 -0.0015" quat="0.634046 0.313026 0.634046 -0.313026" mesh="foot_rm" material="foot_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="-1.59733e-14 8.18096e-15 -0.0015" quat="0.916531 5.0518e-16 -2.22045e-16 -0.399963" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="-1.59733e-14 8.18096e-15 -0.0015" quat="0.916531 5.0518e-16 -2.22045e-16 -0.399963" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="-1.59733e-14 8.18096e-15 -0.0015" quat="0.916531 5.0518e-16 -2.22045e-16 -0.399963" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="-1.59733e-14 8.18096e-15 -0.0015" quat="0.916531 5.0518e-16 -2.22045e-16 -0.399963" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="-0.00930745 -0.070216 -0.0015" quat="6.85727e-16 -0.976641 0.214878 -1.55863e-16" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="-0.00930745 -0.070216 -0.0015" quat="6.85727e-16 -0.976641 0.214878 -1.55863e-16" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="-0.00930745 -0.070216 -0.0015" quat="6.85727e-16 -0.976641 0.214878 -1.55863e-16" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="-0.00930745 -0.070216 -0.0015" quat="6.85727e-16 -0.976641 0.214878 -1.55863e-16" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+          
+          <site group="3" name="closing_leg1_c_joint_1_rm" pos="-0.00930745 -0.070216 -0.003" quat="1.47296e-15 0.659012 -0.752132 1.24997e-16" />
+          
+          <site group="3" name="closing_leg1_c_joint_1_z_rm" pos="-0.00930745 -0.070216 -0.103" quat="1.47296e-15 0.659012 -0.752132 1.24997e-16" />
+        </body>
+      </body>
+      
+      <body name="v2_leglink1_inner_screws_3_rm" pos="-0.0947269 0.04296 0.0095" quat="0.653281 0.653281 -0.270598 0.270598">
+        
+        <joint axis="0 0 1" name="leg2_a_joint_act_rm" type="hinge" />
+        <inertial pos="-0.0218921 1.02476e-16 -0.00362298" mass="0.00538952" fullinertia="1.13867e-07 1.73131e-06 1.82783e-06 1.12494e-20 -4.44987e-08 1.74998e-22" />
+        
+        <geom type="mesh" class="visual_rm" pos="2.08167e-17 1.38778e-17 -0.0055" quat="0.707107 0.707107 0 3.58734e-18" mesh="v2_leglink1_inner_screws_rm" material="v2_leglink1_inner_screws_material_rm" />
+        <geom type="mesh" class="collision_rm" pos="2.08167e-17 1.38778e-17 -0.0055" quat="0.707107 0.707107 0 3.58734e-18" mesh="v2_leglink1_inner_screws_rm" material="v2_leglink1_inner_screws_material_rm" />
+        
+        <geom type="mesh" class="visual_rm" pos="-0.0464129 1.16573e-15 -0.004" quat="1.98295e-15 0.31871 0.947852 1.4711e-16" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+        <geom type="mesh" class="collision_rm" pos="-0.0464129 1.16573e-15 -0.004" quat="1.98295e-15 0.31871 0.947852 1.4711e-16" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+        
+        <geom type="mesh" class="visual_rm" pos="-0.0464129 1.16573e-15 -0.004" quat="1.98295e-15 0.31871 0.947852 1.4711e-16" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+        <geom type="mesh" class="collision_rm" pos="-0.0464129 1.16573e-15 -0.004" quat="1.98295e-15 0.31871 0.947852 1.4711e-16" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+        
+        <body name="spacer_for_legs_2_rm" pos="-0.0464129 0 -0.0055" quat="1 -0 7.50324e-19 1.11022e-16">
+          
+          <joint axis="0 0 1" name="leg2_b_joint_rm" type="hinge" />
+          <inertial pos="-0.00367089 -0.0276934 -0.00386642" mass="0.00618952" fullinertia="4.41275e-06 2.01877e-07 4.58653e-06 -5.68152e-07 -1.43956e-08 -1.08601e-07" />
+          
+          <geom type="mesh" class="visual_rm" pos="1.38778e-17 0 1.38778e-17" quat="0.174341 -0.174341 -0.685277 0.685277" mesh="spacer_for_legs_rm" material="spacer_for_legs_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="1.38778e-17 0 1.38778e-17" quat="0.174341 -0.174341 -0.685277 0.685277" mesh="spacer_for_legs_rm" material="spacer_for_legs_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="-0.00465373 -0.035108 -0.006" quat="0.531838 0.531838 0.465992 0.465992" mesh="leglink2_v2_rm" material="leglink2_v2_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="-0.00465373 -0.035108 -0.006" quat="0.531838 0.531838 0.465992 0.465992" mesh="leglink2_v2_rm" material="leglink2_v2_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="1.08247e-15 -5.27356e-16 -0.0045" quat="2.39612e-16 0.412509 0.910954 7.86285e-16" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="1.08247e-15 -5.27356e-16 -0.0045" quat="2.39612e-16 0.412509 0.910954 7.86285e-16" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="1.08247e-15 -5.27356e-16 -0.0045" quat="2.39612e-16 0.412509 0.910954 7.86285e-16" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="1.08247e-15 -5.27356e-16 -0.0045" quat="2.39612e-16 0.412509 0.910954 7.86285e-16" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="-0.00930745 -0.070216 -0.0045" quat="2.39612e-16 0.412509 0.910954 7.86285e-16" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="-0.00930745 -0.070216 -0.0045" quat="2.39612e-16 0.412509 0.910954 7.86285e-16" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="-0.00930745 -0.070216 -0.0045" quat="2.39612e-16 0.412509 0.910954 7.86285e-16" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="-0.00930745 -0.070216 -0.0045" quat="2.39612e-16 0.412509 0.910954 7.86285e-16" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="-5.41234e-16 1.11022e-16 -0.0015" quat="0.812858 5.66904e-16 1.11022e-16 -0.582462" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="-5.41234e-16 1.11022e-16 -0.0015" quat="0.812858 5.66904e-16 1.11022e-16 -0.582462" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="-5.41234e-16 1.11022e-16 -0.0015" quat="0.812858 5.66904e-16 1.11022e-16 -0.582462" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="-5.41234e-16 1.11022e-16 -0.0015" quat="0.812858 5.66904e-16 1.11022e-16 -0.582462" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+          
+          <site group="3" name="closing_leg2_c_joint_2_rm" pos="-0.00930745 -0.070216 -0.003" quat="1.0973e-15 -0.0658455 -0.99783 -2.27541e-15" />
+          
+          <site group="3" name="closing_leg2_c_joint_2_z_rm" pos="-0.00930745 -0.070216 -0.103" quat="1.0973e-15 -0.0658455 -0.99783 -2.27541e-15" />
+        </body>
+      </body>
+      
+      <body name="v2_leglink1_inner_screws_4_rm" pos="-0.0742269 0.04296 0.0095" quat="0.270598 0.270598 -0.653281 0.653281">
+        
+        <joint axis="0 0 1" name="leg2_e_joint_act_rm" type="hinge" />
+        <inertial pos="-0.0218921 -2.74517e-16 -0.00362298" mass="0.00538952" fullinertia="1.13867e-07 1.73131e-06 1.82783e-06 -3.69073e-20 -4.44987e-08 -5.72212e-22" />
+        
+        <geom type="mesh" class="visual_rm" pos="-6.93889e-18 0 -0.0055" quat="0.707107 0.707107 -0 7.43203e-18" mesh="v2_leglink1_inner_screws_rm" material="v2_leglink1_inner_screws_material_rm" />
+        <geom type="mesh" class="collision_rm" pos="-6.93889e-18 0 -0.0055" quat="0.707107 0.707107 -0 7.43203e-18" mesh="v2_leglink1_inner_screws_rm" material="v2_leglink1_inner_screws_material_rm" />
+        
+        <geom type="mesh" class="visual_rm" pos="-0.0464129 -3.747e-15 -0.004" quat="4.17583e-15 -0.945064 -0.326884 3.51648e-15" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+        <geom type="mesh" class="collision_rm" pos="-0.0464129 -3.747e-15 -0.004" quat="4.17583e-15 -0.945064 -0.326884 3.51648e-15" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+        
+        <geom type="mesh" class="visual_rm" pos="-0.0464129 -3.747e-15 -0.004" quat="4.17583e-15 -0.945064 -0.326884 3.51648e-15" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+        <geom type="mesh" class="collision_rm" pos="-0.0464129 -3.747e-15 -0.004" quat="4.17583e-15 -0.945064 -0.326884 3.51648e-15" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+        
+        <body name="leglink2_v2_with_leg_down_2_rm" pos="-0.0464129 -6.93889e-18 -0.0055" quat="1 -0 -6.46254e-18 2.22045e-16">
+          
+          <joint axis="0 0 1" name="leg2_d_joint_rm" type="hinge" />
+          <inertial pos="-0.00586077 0.0397385 -0.0015" mass="0.00533592" fullinertia="4.0887e-06 2.21685e-07 4.29791e-06 6.59411e-07 2.39408e-21 -9.40991e-21" />
+          
+          <geom type="mesh" class="visual_rm" pos="-0.00465373 0.035108 7.84095e-16" quat="0.465992 -0.465992 -0.531838 0.531838" mesh="leglink2_v2_with_leg_down_rm" material="leglink2_v2_with_leg_down_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="-0.00465373 0.035108 7.84095e-16" quat="0.465992 -0.465992 -0.531838 0.531838" mesh="leglink2_v2_with_leg_down_rm" material="leglink2_v2_with_leg_down_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="-0.0190339 0.0827042 -0.0015" quat="0.313026 -0.634046 -0.313026 -0.634046" mesh="foot_rm" material="foot_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="-0.0190339 0.0827042 -0.0015" quat="0.313026 -0.634046 -0.313026 -0.634046" mesh="foot_rm" material="foot_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="-0.00930745 0.070216 -0.0015" quat="3.67261e-16 0.908147 0.418651 1.13588e-15" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="-0.00930745 0.070216 -0.0015" quat="3.67261e-16 0.908147 0.418651 1.13588e-15" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="-0.00930745 0.070216 -0.0015" quat="3.67261e-16 0.908147 0.418651 1.13588e-15" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="-0.00930745 0.070216 -0.0015" quat="3.67261e-16 0.908147 0.418651 1.13588e-15" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="-1.72033e-14 -4.94743e-15 -0.0015" quat="3.67261e-16 0.908147 0.418651 1.13588e-15" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="-1.72033e-14 -4.94743e-15 -0.0015" quat="3.67261e-16 0.908147 0.418651 1.13588e-15" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="-1.72033e-14 -4.94743e-15 -0.0015" quat="3.67261e-16 0.908147 0.418651 1.13588e-15" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="-1.72033e-14 -4.94743e-15 -0.0015" quat="3.67261e-16 0.908147 0.418651 1.13588e-15" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+          
+          <site group="3" name="closing_leg2_c_joint_1_rm" pos="-0.00930745 0.070216 -0.003" quat="9.92769e-16 0.659012 0.752132 2.45901e-15" />
+          
+          <site group="3" name="closing_leg2_c_joint_1_z_rm" pos="-0.00930745 0.070216 -0.103" quat="9.92769e-16 0.659012 0.752132 2.45901e-15" />
+        </body>
+      </body>
+      
+      <body name="v2_leglink1_inner_screws_5_rm" pos="0.0733231 0.04296 0.0095" quat="0.653281 0.653281 -0.270598 0.270598">
+        
+        <joint axis="0 0 1" name="leg3_a_joint_act_rm" type="hinge" />
+        <inertial pos="-0.0218921 -5.59528e-19 -0.00362298" mass="0.00538952" fullinertia="1.13867e-07 1.73131e-06 1.82783e-06 5.24033e-22 -4.44987e-08 3.59403e-24" />
+        
+        <geom type="mesh" class="visual_rm" pos="0 -6.93889e-18 -0.0055" quat="0.707107 0.707107 -0 2.20026e-19" mesh="v2_leglink1_inner_screws_rm" material="v2_leglink1_inner_screws_material_rm" />
+        <geom type="mesh" class="collision_rm" pos="0 -6.93889e-18 -0.0055" quat="0.707107 0.707107 -0 2.20026e-19" mesh="v2_leglink1_inner_screws_rm" material="v2_leglink1_inner_screws_material_rm" />
+        
+        <geom type="mesh" class="visual_rm" pos="-0.0464129 4.85723e-17 -0.004" quat="5.86225e-16 -0.0517981 -0.998658 -1.0698e-15" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+        <geom type="mesh" class="collision_rm" pos="-0.0464129 4.85723e-17 -0.004" quat="5.86225e-16 -0.0517981 -0.998658 -1.0698e-15" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+        
+        <geom type="mesh" class="visual_rm" pos="-0.0464129 4.85723e-17 -0.004" quat="5.86225e-16 -0.0517981 -0.998658 -1.0698e-15" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+        <geom type="mesh" class="collision_rm" pos="-0.0464129 4.85723e-17 -0.004" quat="5.86225e-16 -0.0517981 -0.998658 -1.0698e-15" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+        
+        <body name="spacer_for_legs_3_rm" pos="-0.0464129 0 -0.0055" quat="0.694276 -2.82734e-14 -3.37841e-13 0.719709">
+          
+          <joint axis="0 0 1" name="leg3_b_joint_rm" type="hinge" />
+          <inertial pos="-0.0275435 0.00466443 -0.00386642" mass="0.00618952" fullinertia="2.4816e-07 4.36646e-06 4.58653e-06 7.18016e-07 -1.08013e-07 1.82918e-08" />
+          
+          <geom type="mesh" class="visual_rm" pos="6.93889e-18 0 0" quat="0.707107 -0.707107 -0 2.51993e-20" mesh="spacer_for_legs_rm" material="spacer_for_legs_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="6.93889e-18 0 0" quat="0.707107 -0.707107 -0 2.51993e-20" mesh="spacer_for_legs_rm" material="spacer_for_legs_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="-0.034918 0.00591327 -0.006" quat="0.704621 0.704621 -0.0592412 -0.0592412" mesh="leglink2_v2_rm" material="leglink2_v2_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="-0.034918 0.00591327 -0.006" quat="0.704621 0.704621 -0.0592412 -0.0592412" mesh="leglink2_v2_rm" material="leglink2_v2_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="-0.0698359 0.0118265 -0.0045" quat="3.08651e-13 -0.967286 -0.253687 1.40944e-13" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="-0.0698359 0.0118265 -0.0045" quat="3.08651e-13 -0.967286 -0.253687 1.40944e-13" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="-0.0698359 0.0118265 -0.0045" quat="3.08651e-13 -0.967286 -0.253687 1.40944e-13" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="-0.0698359 0.0118265 -0.0045" quat="3.08651e-13 -0.967286 -0.253687 1.40944e-13" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="-4.91482e-14 4.92557e-14 -0.0015" quat="3.08651e-13 -0.967286 -0.253687 1.40944e-13" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="-4.91482e-14 4.92557e-14 -0.0015" quat="3.08651e-13 -0.967286 -0.253687 1.40944e-13" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="-4.91482e-14 4.92557e-14 -0.0015" quat="3.08651e-13 -0.967286 -0.253687 1.40944e-13" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="-4.91482e-14 4.92557e-14 -0.0015" quat="3.08651e-13 -0.967286 -0.253687 1.40944e-13" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="-5.02237e-14 5.08985e-14 -0.0045" quat="3.08651e-13 -0.967286 -0.253687 1.40944e-13" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="-5.02237e-14 5.08985e-14 -0.0045" quat="3.08651e-13 -0.967286 -0.253687 1.40944e-13" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="-5.02237e-14 5.08985e-14 -0.0045" quat="3.08651e-13 -0.967286 -0.253687 1.40944e-13" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="-5.02237e-14 5.08985e-14 -0.0045" quat="3.08651e-13 -0.967286 -0.253687 1.40944e-13" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+          
+          <site group="3" name="closing_leg3_c_joint_2_rm" pos="-0.0698359 0.0118265 -0.003" quat="2.44195e-13 -0.996484 0.0837797 2.3574e-13" />
+          
+          <site group="3" name="closing_leg3_c_joint_2_z_rm" pos="-0.0698359 0.0118265 -0.103" quat="2.44195e-13 -0.996484 0.0837797 2.3574e-13" />
+        </body>
+      </body>
+      
+      <body name="v2_leglink1_inner_screws_6_rm" pos="0.0938231 0.04296 0.0095" quat="0.270598 0.270598 -0.653281 0.653281">
+        
+        <joint axis="0 0 1" name="leg3_e_joint_act_rm" type="hinge" />
+        <inertial pos="-0.0218921 -1.85759e-16 -0.00362298" mass="0.00538952" fullinertia="1.13867e-07 1.73131e-06 1.82783e-06 -2.49096e-20 -4.44987e-08 -3.93031e-22" />
+        
+        <geom type="mesh" class="visual_rm" pos="6.93889e-18 0 -0.0055" quat="0.707107 0.707107 -0 -3.58734e-18" mesh="v2_leglink1_inner_screws_rm" material="v2_leglink1_inner_screws_material_rm" />
+        <geom type="mesh" class="collision_rm" pos="6.93889e-18 0 -0.0055" quat="0.707107 0.707107 -0 -3.58734e-18" mesh="v2_leglink1_inner_screws_rm" material="v2_leglink1_inner_screws_material_rm" />
+        
+        <geom type="mesh" class="visual_rm" pos="-0.0464129 -2.53964e-15 -0.004" quat="2.99011e-15 -0.983052 -0.183329 4.84808e-15" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+        <geom type="mesh" class="collision_rm" pos="-0.0464129 -2.53964e-15 -0.004" quat="2.99011e-15 -0.983052 -0.183329 4.84808e-15" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+        
+        <geom type="mesh" class="visual_rm" pos="-0.0464129 -2.53964e-15 -0.004" quat="2.99011e-15 -0.983052 -0.183329 4.84808e-15" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+        <geom type="mesh" class="collision_rm" pos="-0.0464129 -2.53964e-15 -0.004" quat="2.99011e-15 -0.983052 -0.183329 4.84808e-15" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+        
+        <body name="leglink2_v2_with_leg_down_3_rm" pos="-0.0464129 0 -0.0055" quat="0.659012 8.75557e-17 -0 0.752132">
+          
+          <joint axis="0 0 1" name="leg3_d_joint_rm" type="hinge" />
+          <inertial pos="0.040164 0.000588113 -0.0015" mass="0.00533592" fullinertia="1.1666e-07 4.19373e-06 4.29791e-06 -1.32899e-07 2.86355e-21 7.00671e-22" />
+          
+          <geom type="mesh" class="visual_rm" pos="0.0844882 0.00800113 -0.0015" quat="0.270598 0.653281 -0.270598 0.653281" mesh="foot_rm" material="foot_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="0.0844882 0.00800113 -0.0015" quat="0.270598 0.653281 -0.270598 0.653281" mesh="foot_rm" material="foot_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="0.0354151 -1.38778e-17 0" quat="0.707107 -0.707107 -0 2.17372e-17" mesh="leglink2_v2_with_leg_down_rm" material="leglink2_v2_with_leg_down_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="0.0354151 -1.38778e-17 0" quat="0.707107 -0.707107 -0 2.17372e-17" mesh="leglink2_v2_with_leg_down_rm" material="leglink2_v2_with_leg_down_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="0.0708302 9.29812e-16 -0.0015" quat="2.55288e-15 0.952043 -0.305964 1.96817e-15" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="0.0708302 9.29812e-16 -0.0015" quat="2.55288e-15 0.952043 -0.305964 1.96817e-15" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="0.0708302 9.29812e-16 -0.0015" quat="2.55288e-15 0.952043 -0.305964 1.96817e-15" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="0.0708302 9.29812e-16 -0.0015" quat="2.55288e-15 0.952043 -0.305964 1.96817e-15" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="-2.36616e-15 -3.09475e-15 -0.0015" quat="2.55288e-15 0.952043 -0.305964 1.96817e-15" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="-2.36616e-15 -3.09475e-15 -0.0015" quat="2.55288e-15 0.952043 -0.305964 1.96817e-15" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="-2.36616e-15 -3.09475e-15 -0.0015" quat="2.55288e-15 0.952043 -0.305964 1.96817e-15" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="-2.36616e-15 -3.09475e-15 -0.0015" quat="2.55288e-15 0.952043 -0.305964 1.96817e-15" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+          
+          <site group="3" name="closing_leg3_c_joint_1_rm" pos="0.0708302 -4.16334e-17 -0.003" quat="0 1 0 0" />
+          
+          <site group="3" name="closing_leg3_c_joint_1_z_rm" pos="0.0708302 -4.16334e-17 -0.103" quat="0 1 0 0" />
+        </body>
+      </body>
+      
+      <body name="v2_leglink1_inner_screws_7_rm" pos="0.0733231 -0.04296 0.0095" quat="0.653281 -0.653281 -0.270598 -0.270598">
+        
+        <joint axis="0 0 1" name="leg4_a_joint_act_rm" type="hinge" />
+        <inertial pos="-0.0218921 2.35836e-19 -0.00362298" mass="0.00538952" fullinertia="1.13867e-07 1.73131e-06 1.82783e-06 -3.83963e-22 -4.44987e-08 2.13026e-23" />
+        
+        <geom type="mesh" class="visual_rm" pos="6.93889e-18 0 -0.0055" quat="0.707107 0.707107 0 -1.50841e-17" mesh="v2_leglink1_inner_screws_rm" material="v2_leglink1_inner_screws_material_rm" />
+        <geom type="mesh" class="collision_rm" pos="6.93889e-18 0 -0.0055" quat="0.707107 0.707107 0 -1.50841e-17" mesh="v2_leglink1_inner_screws_rm" material="v2_leglink1_inner_screws_material_rm" />
+        
+        <geom type="mesh" class="visual_rm" pos="-0.0464129 -4.16334e-17 -0.004" quat="0.137926 -3.89272e-15 -9.76996e-15 -0.990443" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+        <geom type="mesh" class="collision_rm" pos="-0.0464129 -4.16334e-17 -0.004" quat="0.137926 -3.89272e-15 -9.76996e-15 -0.990443" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+        
+        <geom type="mesh" class="visual_rm" pos="-0.0464129 -4.16334e-17 -0.004" quat="0.137926 -3.89272e-15 -9.76996e-15 -0.990443" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+        <geom type="mesh" class="collision_rm" pos="-0.0464129 -4.16334e-17 -0.004" quat="0.137926 -3.89272e-15 -9.76996e-15 -0.990443" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+        
+        <body name="spacer_for_legs_4_rm" pos="-0.0464129 0 -0.0055" quat="0.789012 -1.17158e-15 -3.33067e-16 -0.614378">
+          
+          <joint axis="0 0 1" name="leg4_b_joint_rm" type="hinge" />
+          <inertial pos="-0.0277485 0.00322816 -0.00386642" mass="0.00618952" fullinertia="1.84806e-07 4.42982e-06 4.58653e-06 5.00623e-07 -1.08817e-07 1.26594e-08" />
+          
+          <geom type="mesh" class="visual_rm" pos="-0.0351779 0.00409246 -0.006" quat="0.0409241 0.0409241 0.705922 0.705922" mesh="leglink2_v2_rm" material="leglink2_v2_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="-0.0351779 0.00409246 -0.006" quat="0.0409241 0.0409241 0.705922 0.705922" mesh="leglink2_v2_rm" material="leglink2_v2_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="-6.93889e-18 6.93889e-18 6.93889e-18" quat="0.707107 -0.707107 0 1.48768e-17" mesh="spacer_for_legs_rm" material="spacer_for_legs_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="-6.93889e-18 6.93889e-18 6.93889e-18" quat="0.707107 -0.707107 0 1.48768e-17" mesh="spacer_for_legs_rm" material="spacer_for_legs_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="-0.0703557 0.00818491 -0.0045" quat="0.762405 9.40835e-15 3.66374e-15 -0.6471" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="-0.0703557 0.00818491 -0.0045" quat="0.762405 9.40835e-15 3.66374e-15 -0.6471" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="-0.0703557 0.00818491 -0.0045" quat="0.762405 9.40835e-15 3.66374e-15 -0.6471" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="-0.0703557 0.00818491 -0.0045" quat="0.762405 9.40835e-15 3.66374e-15 -0.6471" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="5.13478e-16 -2.5327e-16 -0.0015" quat="0.762405 9.63719e-15 3.21965e-15 -0.6471" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="5.13478e-16 -2.5327e-16 -0.0015" quat="0.762405 9.63719e-15 3.21965e-15 -0.6471" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="5.13478e-16 -2.5327e-16 -0.0015" quat="0.762405 9.63719e-15 3.21965e-15 -0.6471" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="5.13478e-16 -2.5327e-16 -0.0015" quat="0.762405 9.63719e-15 3.21965e-15 -0.6471" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="2.77556e-17 -2.77556e-17 -0.0045" quat="0.762405 9.63719e-15 3.21965e-15 -0.6471" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="2.77556e-17 -2.77556e-17 -0.0045" quat="0.762405 9.63719e-15 3.21965e-15 -0.6471" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="2.77556e-17 -2.77556e-17 -0.0045" quat="0.762405 9.63719e-15 3.21965e-15 -0.6471" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="2.77556e-17 -2.77556e-17 -0.0045" quat="0.762405 9.63719e-15 3.21965e-15 -0.6471" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+          
+          <site group="3" name="closing_leg4_c_joint_2_rm" pos="-0.0703557 0.00818491 -0.003" quat="4.66385e-16 0.664997 -0.746846 -1.30422e-15" />
+          
+          <site group="3" name="closing_leg4_c_joint_2_z_rm" pos="-0.0703557 0.00818491 -0.103" quat="4.66385e-16 0.664997 -0.746846 -1.30422e-15" />
+        </body>
+      </body>
+      
+      <body name="v2_leglink1_inner_screws_8_rm" pos="0.0938231 -0.04296 0.0095" quat="0.270598 -0.270598 -0.653281 -0.653281">
+        
+        <joint axis="0 0 1" name="leg4_e_joint_act_rm" type="hinge" />
+        <inertial pos="-0.0218921 2.14248e-16 -0.00362298" mass="0.00538952" fullinertia="1.13867e-07 1.73131e-06 1.82783e-06 2.79704e-20 -4.44987e-08 3.98225e-22" />
+        
+        <geom type="mesh" class="visual_rm" pos="0 0 -0.0055" quat="0.707107 0.707107 0 -2.41682e-17" mesh="v2_leglink1_inner_screws_rm" material="v2_leglink1_inner_screws_material_rm" />
+        <geom type="mesh" class="collision_rm" pos="0 0 -0.0055" quat="0.707107 0.707107 0 -2.41682e-17" mesh="v2_leglink1_inner_screws_rm" material="v2_leglink1_inner_screws_material_rm" />
+        
+        <geom type="mesh" class="visual_rm" pos="-0.0464129 2.84495e-15 -0.004" quat="0.811205 1.66533e-15 1.72085e-14 -0.584762" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+        <geom type="mesh" class="collision_rm" pos="-0.0464129 2.84495e-15 -0.004" quat="0.811205 1.66533e-15 1.72085e-14 -0.584762" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+        
+        <geom type="mesh" class="visual_rm" pos="-0.0464129 2.84495e-15 -0.004" quat="0.811205 1.66533e-15 1.72085e-14 -0.584762" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+        <geom type="mesh" class="collision_rm" pos="-0.0464129 2.84495e-15 -0.004" quat="0.811205 1.66533e-15 1.72085e-14 -0.584762" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+        
+        <body name="leglink2_v2_with_leg_down_4_rm" pos="-0.0464129 4.16334e-17 -0.0055" quat="0.659012 4.88651e-16 -6.38378e-16 -0.752132">
+          
+          <joint axis="0 0 1" name="leg4_d_joint_rm" type="hinge" />
+          <inertial pos="0.040164 -0.000588113 -0.0015" mass="0.00533592" fullinertia="1.1666e-07 4.19373e-06 4.29791e-06 1.32899e-07 -2.61665e-22 -1.92065e-22" />
+          
+          <geom type="mesh" class="visual_rm" pos="0.0844882 -0.00800113 -0.0015" quat="0.653281 -0.270598 0.653281 0.270598" mesh="foot_rm" material="foot_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="0.0844882 -0.00800113 -0.0015" quat="0.653281 -0.270598 0.653281 0.270598" mesh="foot_rm" material="foot_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="0.0354151 0 -0.003" quat="0.707107 0.707107 0 -2.17381e-17" mesh="leglink2_v2_with_leg_down_rm" material="leglink2_v2_with_leg_down_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="0.0354151 0 -0.003" quat="0.707107 0.707107 0 -2.17381e-17" mesh="leglink2_v2_with_leg_down_rm" material="leglink2_v2_with_leg_down_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="3.46945e-16 -4.44089e-16 -0.0015" quat="0.963061 1.04805e-16 1.11022e-16 0.269284" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="3.46945e-16 -4.44089e-16 -0.0015" quat="0.963061 1.04805e-16 1.11022e-16 0.269284" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="3.46945e-16 -4.44089e-16 -0.0015" quat="0.963061 1.04805e-16 1.11022e-16 0.269284" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="3.46945e-16 -4.44089e-16 -0.0015" quat="0.963061 1.04805e-16 1.11022e-16 0.269284" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="0.0708302 -5.68989e-16 -0.0015" quat="0.963061 1.04805e-16 1.11022e-16 0.269284" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="0.0708302 -5.68989e-16 -0.0015" quat="0.963061 1.04805e-16 1.11022e-16 0.269284" mesh="7487n16_precision_stainless_steel_ball_bearing_rm" material="7487n16_precision_stainless_steel_ball_bearing_material_rm" />
+          
+          <geom type="mesh" class="visual_rm" pos="0.0708302 -5.68989e-16 -0.0015" quat="0.963061 1.04805e-16 1.11022e-16 0.269284" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+          <geom type="mesh" class="collision_rm" pos="0.0708302 -5.68989e-16 -0.0015" quat="0.963061 1.04805e-16 1.11022e-16 0.269284" mesh="7487n16_precision_stainless_steel_ball_bearing__2_rm" material="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" />
+          
+          <site group="3" name="closing_leg4_c_joint_1_rm" pos="0.0708302 0 -0.003" quat="0 1 0 0" />
+          
+          <site group="3" name="closing_leg4_c_joint_1_z_rm" pos="0.0708302 1.38778e-17 -0.103" quat="0 1 0 0" />
+        </body>
+      </body>
+    </body>
+  </worldbody>
+  <asset>
+    <mesh file="foot_rm.stl" />
+    <mesh file="leglink2_v2_rm.stl" />
+    <mesh file="dc15_a01_case_m_dummy_stp_rm.stl" />
+    <mesh file="rigid_microtaur_base_rm.stl" />
+    <mesh file="xl_xc_330_stp_1_rm.stl" />
+    <mesh file="v2_leglink1_inner_screws_rm.stl" />
+    <mesh file="7487n16_precision_stainless_steel_ball_bearing_rm.stl" />
+    <mesh file="battery_rm.stl" />
+    <mesh file="7487n16_precision_stainless_steel_ball_bearing__2_rm.stl" />
+    <mesh file="spacer_for_legs_rm.stl" />
+    <mesh file="dc15_a01_case_f_dummy_stp_rm.stl" />
+    <mesh file="arduino_mkr1000_part_rm.stl" />
+    <mesh file="leglink2_v2_with_leg_down_rm.stl" />
+    <material name="rigid_microtaur_base_material_rm" rgba="0.94921875 0.52734375 0.00390625 1" />
+    <material name="battery_material_rm" rgba="0.3046875 0.5625 0.8984375 1" />
+    <material name="dc15_a01_case_m_dummy_stp_material_rm" rgba="0.262745 0.282353 0.301961 1" />
+    <material name="dc15_a01_case_f_dummy_stp_material_rm" rgba="0.262745 0.282353 0.301961 1" />
+    <material name="xl_xc_330_stp_1_material_rm" rgba="0.262745 0.282353 0.301961 1" />
+    <material name="arduino_mkr1000_part_material_rm" rgba="0.03125 0.29296875 0.6328125 1" />
+    <material name="v2_leglink1_inner_screws_material_rm" rgba="0.94921875 0.52734375 0.00390625 1" />
+    <material name="7487n16_precision_stainless_steel_ball_bearing_material_rm" rgba="0.752941 0.752941 0.752941 1" />
+    <material name="7487n16_precision_stainless_steel_ball_bearing__2_material_rm" rgba="0.752941 0.752941 0.752941 1" />
+    <material name="spacer_for_legs_material_rm" rgba="0.94921875 0.52734375 0.00390625 1" />
+    <material name="leglink2_v2_material_rm" rgba="0.94921875 0.52734375 0.00390625 1" />
+    <material name="leglink2_v2_with_leg_down_material_rm" rgba="0.94921875 0.52734375 0.00390625 1" />
+    <material name="foot_material_rm" rgba="0.796078 0.823529 0.937255 1" />
+  </asset>
+  <actuator>
+    <position class="rigid_microtaur_rm" name="leg1_a_joint_act_rm" joint="leg1_a_joint_act_rm" />
+    
+    <position class="rigid_microtaur_rm" name="leg1_e_joint_act_rm" joint="leg1_e_joint_act_rm" />
+    
+    <position class="rigid_microtaur_rm" name="leg2_a_joint_act_rm" joint="leg2_a_joint_act_rm" />
+    
+    <position class="rigid_microtaur_rm" name="leg2_e_joint_act_rm" joint="leg2_e_joint_act_rm" />
+    
+    <position class="rigid_microtaur_rm" name="leg3_a_joint_act_rm" joint="leg3_a_joint_act_rm" />
+    
+    <position class="rigid_microtaur_rm" name="leg3_e_joint_act_rm" joint="leg3_e_joint_act_rm" />
+    
+    <position class="rigid_microtaur_rm" name="leg4_a_joint_act_rm" joint="leg4_a_joint_act_rm" />
+    
+    <position class="rigid_microtaur_rm" name="leg4_e_joint_act_rm" joint="leg4_e_joint_act_rm" />
+    
+  </actuator>
+  <equality>
+    <connect site1="closing_leg1_c_joint_1_rm" site2="closing_leg1_c_joint_2_rm" />
+    <connect site1="closing_leg1_c_joint_1_z_rm" site2="closing_leg1_c_joint_2_z_rm" />
+    <connect site1="closing_leg2_c_joint_1_rm" site2="closing_leg2_c_joint_2_rm" />
+    <connect site1="closing_leg2_c_joint_1_z_rm" site2="closing_leg2_c_joint_2_z_rm" />
+    <connect site1="closing_leg3_c_joint_1_rm" site2="closing_leg3_c_joint_2_rm" />
+    <connect site1="closing_leg3_c_joint_1_z_rm" site2="closing_leg3_c_joint_2_z_rm" />
+    <connect site1="closing_leg4_c_joint_1_rm" site2="closing_leg4_c_joint_2_rm" />
+    <connect site1="closing_leg4_c_joint_1_z_rm" site2="closing_leg4_c_joint_2_z_rm" />
+  </equality>
+</mujoco>

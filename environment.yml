@@ -1,0 +1,56 @@
+name: onshape2robot
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - _libgcc_mutex=0.1=conda_forge
+  - _openmp_mutex=4.5=2_gnu
+  - bzip2=1.0.8=h4bc722e_7
+  - ca-certificates=2025.4.26=hbd8a1cb_0
+  - ld_impl_linux-64=2.43=h712a8e2_4
+  - libexpat=2.7.0=h5888daf_0
+  - libffi=3.4.6=h2dba641_1
+  - libgcc=15.1.0=h767d61c_2
+  - libgcc-ng=15.1.0=h69a702a_2
+  - libgomp=15.1.0=h767d61c_2
+  - liblzma=5.8.1=hb9d3cd8_1
+  - libnsl=2.0.1=hd590300_0
+  - libsqlite=3.49.2=hee588c1_0
+  - libuuid=2.38.1=h0b41bf4_0
+  - libxcrypt=4.4.36=hd590300_1
+  - libzlib=1.3.1=hb9d3cd8_2
+  - ncurses=6.5=h2d0b736_3
+  - openssl=3.5.0=h7b32b05_1
+  - pip=25.1.1=pyh8b19718_0
+  - python=3.12.10=h9e4cc4f_0_cpython
+  - readline=8.2=h8c095d6_2
+  - setuptools=80.8.0=pyhff2d567_0
+  - tk=8.6.13=noxft_hd72426e_102
+  - tzdata=2025b=h78e105d_0
+  - wheel=0.45.1=pyhd8ed1ab_1
+  - pip:
+      - absl-py==2.3.0
+      - certifi==2025.4.26
+      - charset-normalizer==3.4.2
+      - colorama==0.4.6
+      - commentjson==0.9.0
+      - etils==1.12.2
+      - fsspec==2025.5.1
+      - glfw==2.9.0
+      - idna==3.10
+      - importlib-resources==6.5.2
+      - lark-parser==0.7.8
+      - mujoco==3.3.2
+      - numpy==2.2.6
+      - numpy-stl==3.2.0
+      - onshape-to-robot==1.7.2
+      - pymeshlab==2023.12.post3
+      - pyopengl==3.1.9
+      - python-dotenv==1.1.0
+      - python-utils==3.9.1
+      - requests==2.32.3
+      - transforms3d==0.4.2
+      - typing-extensions==4.13.2
+      - urllib3==2.4.0
+      - zipp==3.22.0
+prefix: /home/sman/miniconda3/envs/onshape2robot

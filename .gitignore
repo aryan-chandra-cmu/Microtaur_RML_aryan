@@ -1,0 +1,82 @@
+# Python virtual environments
+venv/
+.venv/
+env/
+ENV/
+/.env
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+eggs/
+*.egg-info/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+.cache
+.pytest_cache/
+htmlcov/
+coverage.xml
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# MuJoCo / simulation logs and generated assets
+**/logs/
+*.log
+
+# compiled MuJoCo binaries
+.mujoco/
+
+# local secrets
+.env
+cat >> .gitignore << 'EOF'
+# env / python
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# logs / runs / checkpoints
+runs/
+logs/
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+
+# mujoco / isaac artifacts
+*.mjb
+*.mp4
+*.gif
+*.pkl
+*.npz
+
+# datasets
+data/
+EOF

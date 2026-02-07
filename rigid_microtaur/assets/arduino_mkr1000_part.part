@@ -1,0 +1,14 @@
+{
+    "configuration": "default",
+    "documentId": "90b1b58fe661b08b82af3134",
+    "documentMicroversion": "ddefe9127b86274fe00e738e",
+    "documentVersion": "0d2dbc93963f0dda2213b487",
+    "elementId": "7f1ad79265182a47642da8b1",
+    "fullConfiguration": "default",
+    "id": "MW/d4j2RWSHB1qP0S",
+    "isStandardContent": false,
+    "name": "Arduino MKR1000 Part <3>",
+    "partId": "JFD",
+    "suppressed": false,
+    "type": "Part"
+}

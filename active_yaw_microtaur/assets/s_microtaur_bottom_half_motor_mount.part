@@ -1,0 +1,13 @@
+{
+    "configuration": "default",
+    "documentId": "ecccd255420f218d79bb8e0d",
+    "documentMicroversion": "3a330b72cab07a2967b6c80a",
+    "elementId": "d214e27421fc9b5e71ecdd44",
+    "fullConfiguration": "default",
+    "id": "MIQS5WMvrgLoBTAw0",
+    "isStandardContent": false,
+    "name": "S_Microtaur_bottom_half_motor_mount <1>",
+    "partId": "JFD",
+    "suppressed": false,
+    "type": "Part"
+}
