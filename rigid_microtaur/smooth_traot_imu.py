@@ -1,13 +1,3 @@
-# smooth_trot_imu.py  (DROP-IN FILE)
-# Fix for tipping: apply Arduino gait as *scaled deltas* around spawn/stand.
-# - STAND is treated as the MuJoCo spawn equilibrium (delta=0).
-# - Every command becomes: target = spawn_qpos + sign * deg2rad(gait_scale * (goal - stand_goal))
-# - Start trot with small gait_scale and ramp up slowly.
-#
-# DROP-IN FIX APPLIED:
-# ✅ Prevented DOUBLE-OFFSET being applied to motors 1,2,7,8.
-#   You were adding _arduino_front_back_offset(...) AND also adding self.offset inside arduino_moveMotor_goal_deg().
-#   Now: arduino_moveMotor_goal_deg() is PURE (wrap/clamp only), and offsets are applied ONLY via _arduino_front_back_offset().
 
 import time as pytime
 from datetime import datetime
