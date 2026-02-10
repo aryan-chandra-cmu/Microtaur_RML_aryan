@@ -248,32 +248,20 @@ class MicrotaurArduinoPort:
         # Apply Arduino front/back offset ONCE in command space
         cmd_position_deg = float(cmd_position_deg) + self._arduino_front_back_offset(mid)
 
+        # Arduino wrap/clamp mapping (odd/even)
         goal_deg = self.arduino_moveMotor_goal_deg(mid, cmd_position_deg)
 
-        # fallback if not calibrated
-        if (
-            (mid not in self.spawn_qpos)
-            or (mid not in self.stand_goal_deg)
-            or (self.sign.get(mid, 0.0) == 0.0)
-        ):
-            self.ctrl_target[aid] = deg2rad(goal_deg)
-            return
+        # Absolute target in radians
+        target_q = deg2rad(goal_deg)
 
-        # scaled delta from stand goal
-        delta_deg = goal_deg - float(self.stand_goal_deg[mid])
-        delta_deg *= float(self.gait_scale)
-
-        jid = self.motor_to_jnt[mid]
-        q_base = float(self.spawn_qpos[mid])
-        target_q = q_base + float(self.sign[mid]) * deg2rad(delta_deg)
-
-        if int(self.model.jnt_limited[jid]) != 0:
-            lo, hi = float(self.model.jnt_range[jid, 0]), float(
-                self.model.jnt_range[jid, 1]
-            )
+        # If actuator is tied to a limited joint, clamp to joint range
+        jid = self.motor_to_jnt.get(mid, None)
+        if jid is not None and int(self.model.jnt_limited[jid]) != 0:
+            lo, hi = float(self.model.jnt_range[jid, 0]), float(self.model.jnt_range[jid, 1])
             target_q = float(np.clip(target_q, lo, hi))
 
         self.ctrl_target[aid] = target_q
+
 
     def moveAllMotors(self, frontsAngle, backsAngle, time_ms):
         frontsAngle = float(frontsAngle)
@@ -370,11 +358,10 @@ class MicrotaurArduinoPort:
                 if sleep_s > 0:
                     pytime.sleep(sleep_s)
 
-    # ----- Gaits (unchanged angles, now scaled by gait_scale internally) -----
     def ARest(self, time_ms):
         frontsAngle = 315
         backsAngle = 45
-        for mid, ang in [(1, frontsAngle), (2, backsAngle), (5, frontsAngle), (6, backsAngle)]:
+        for mid, ang in [(1, frontsAngle), (2, backsAngle), (5, frontsAngle + 100), (6, backsAngle)]:
             self.set_motor_target_deg(mid, ang)
         return time_ms
 
@@ -413,7 +400,7 @@ class MicrotaurArduinoPort:
     def BRest(self, time_ms):
         frontsAngle = 45
         backsAngle = 315
-        for mid, ang in [(8, frontsAngle), (7, backsAngle), (4, frontsAngle), (3, backsAngle)]:
+        for mid, ang in [(8, frontsAngle), (7, backsAngle), (4, frontsAngle - 100), (3, backsAngle)]:
             self.set_motor_target_deg(mid, ang)
         return time_ms
 
@@ -497,11 +484,12 @@ def main():
     REALTIME_PLAYBACK = True
 
     # gentler timings
-    stepUpTime = 100
-    stepFowardTime = 100
-    stepDownTime = 100
-    sweepTime = 100
+    stepUpTime = 35
+    stepFowardTime = 35
+    stepDownTime = 35
+    sweepTime = 75
     restTime = 100
+
 
     trot_steps = [
         ("BStepUp", stepUpTime),
@@ -522,34 +510,21 @@ def main():
             mujoco.mj_step(model, data)
             viewer.sync()
 
-        # calibrate so STAND == spawn equilibrium
-        robot.calibrate_once(viewer, stand_fronts=315.0, stand_backs=45.0)
-
-        # capture stand_zero_deg for rel logging columns
-        robot.set_gait_scale(0.0)
+        # go to stand
         robot.moveAllMotors(315, 45, 1000)
         robot.hold_ms(viewer, 1000, realtime=REALTIME_PLAYBACK)
-        robot.stand_zero_deg = {}
-        for mid in range(1, robot.motor_count + 1):
-            jid = robot.motor_to_jnt[mid]
-            robot.stand_zero_deg[mid] = unwrap_like_arduino(mid, joint_angle_deg(model, data, jid))
 
-        # RAMPED TROT
-        cycles = 10
-        start_scale = 0.6
-        end_scale = 0.6
-
-        for c in range(cycles):
+        # run trot cycles (no scaling)
+        cycles = 100
+        for _ in range(cycles):
             if not viewer.is_running():
                 break
-            s = start_scale + (end_scale - start_scale) * (c / max(cycles - 1, 1))
-            robot.set_gait_scale(s)
             run_step_commands(robot, viewer, trot_steps, realtime=REALTIME_PLAYBACK)
 
-        # return to stand equilibrium
-        robot.set_gait_scale(0.0)
+        # return to sit or stand, your choice
         robot.moveAllMotors(315, 45, 1500)
         robot.hold_ms(viewer, 1500, realtime=REALTIME_PLAYBACK)
+
 
     if robot.csv_fd is not None:
         try:

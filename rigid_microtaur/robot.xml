@@ -112,7 +112,7 @@
       <!-- Link v2_leglink1_inner_screws -->
       <body name="v2_leglink1_inner_screws" pos="-0.0947269 -0.04296 0.0095" quat="0.653281 -0.653281 -0.270598 -0.270598">
         <!-- Joint from battery to v2_leglink1_inner_screws -->
-        <joint axis="0 0 1" name="leg1_a_joint_act" type="hinge" />
+        <joint axis="0 0 -1" name="leg1_a_joint_act" type="hinge" />
         <inertial pos="-0.0218921 8.56683e-15 -0.00362298" mass="0.00538952" fullinertia="1.13867e-07 1.73131e-06 1.82783e-06 1.13351e-18 -4.44987e-08 1.74335e-20"/>
         <!-- Part v2_leglink1_inner_screws -->
         <geom type="mesh" class="visual" pos="2.08167e-17 -1.38778e-17 -0.0055" quat="0.707107 0.707107 0 1.0699e-17" mesh="v2_leglink1_inner_screws" material="v2_leglink1_inner_screws_material"/>
@@ -155,7 +155,7 @@
           <!-- Frame closing_leg1_c_joint_2 -->
           <site group="3" name="closing_leg1_c_joint_2" pos="-0.0505419 -0.049623 -0.003" quat="1.38134e-15 0.922115 -0.386917 4.13718e-16"/>
           <!-- Frame closing_leg1_c_joint_2_z -->
-          <site group="3" name="closing_leg1_c_joint_2_z" pos="-0.0505419 -0.049623 -0.103" quat="1.38134e-15 0.922115 -0.386917 4.13718e-16"/>
+          <site group="3" name="closing_leg1_c_joint_2_z" pos="-0.0505419 -0.049623 -0.10736" quat="1.38134e-15 0.922115 -0.386917 4.13718e-16"/>
         </body>
       </body>
       <!-- Link v2_leglink1_inner_screws_2 -->
@@ -181,8 +181,8 @@
           <geom type="mesh" class="visual" pos="-0.00465373 -0.035108 -0.003" quat="0.465992 0.465992 -0.531838 -0.531838" mesh="leglink2_v2_with_leg_down" material="leglink2_v2_with_leg_down_material"/>
           <geom type="mesh" class="collision" pos="-0.00465373 -0.035108 -0.003" quat="0.465992 0.465992 -0.531838 -0.531838" mesh="leglink2_v2_with_leg_down" material="leglink2_v2_with_leg_down_material"/>
           <!-- Part foot -->
-          <geom type="mesh" class="visual" pos="-0.0190339 -0.0827042 -0.0015" quat="0.634046 0.313026 0.634046 -0.313026" mesh="foot" material="foot_material"/>
-          <geom type="mesh" class="collision" pos="-0.0190339 -0.0827042 -0.0015" quat="0.634046 0.313026 0.634046 -0.313026" mesh="foot" material="foot_material"/>
+          <geom type="mesh" class="visual" pos="-0.0190339 -0.08620 -0.0015" quat="0.634046 0.313026 0.634046 -0.313026" mesh="foot" material="foot_material"/>
+          <geom type="mesh" class="collision" pos="-0.0190339 -0.08620 -0.0015" quat="0.634046 0.313026 0.634046 -0.313026" mesh="foot" material="foot_material"/>
           <!-- Part 7487n16_precision_stainless_steel_ball_bearing_11 -->
           <geom type="mesh" class="visual" pos="-1.59733e-14 8.18096e-15 -0.0015" quat="0.916531 5.0518e-16 -2.22045e-16 -0.399963" mesh="7487n16_precision_stainless_steel_ball_bearing" material="7487n16_precision_stainless_steel_ball_bearing_material"/>
           <geom type="mesh" class="collision" pos="-1.59733e-14 8.18096e-15 -0.0015" quat="0.916531 5.0518e-16 -2.22045e-16 -0.399963" mesh="7487n16_precision_stainless_steel_ball_bearing" material="7487n16_precision_stainless_steel_ball_bearing_material"/>
@@ -198,13 +198,13 @@
           <!-- Frame closing_leg1_c_joint_1 -->
           <site group="3" name="closing_leg1_c_joint_1" pos="-0.00930745 -0.070216 -0.003" quat="1.47296e-15 0.659012 -0.752132 1.24997e-16"/>
           <!-- Frame closing_leg1_c_joint_1_z -->
-          <site group="3" name="closing_leg1_c_joint_1_z" pos="-0.00930745 -0.070216 -0.103" quat="1.47296e-15 0.659012 -0.752132 1.24997e-16"/>
+          <site group="3" name="closing_leg1_c_joint_1_z" pos="-0.00930745 -0.070216 -0.10736" quat="1.47296e-15 0.659012 -0.752132 1.24997e-16"/>
         </body>
       </body>
       <!-- Link v2_leglink1_inner_screws_3 -->
       <body name="v2_leglink1_inner_screws_3" pos="-0.0947269 0.04296 0.0095" quat="0.653281 0.653281 -0.270598 0.270598">
         <!-- Joint from battery to v2_leglink1_inner_screws_3 -->
-        <joint axis="0 0 1" name="leg2_a_joint_act" type="hinge" />
+        <joint axis="0 0 -1" name="leg2_a_joint_act" type="hinge" />
         <inertial pos="-0.0218921 1.02476e-16 -0.00362298" mass="0.00538952" fullinertia="1.13867e-07 1.73131e-06 1.82783e-06 1.12494e-20 -4.44987e-08 1.74998e-22"/>
         <!-- Part v2_leglink1_inner_screws_3 -->
         <geom type="mesh" class="visual" pos="2.08167e-17 1.38778e-17 -0.0055" quat="0.707107 0.707107 0 3.58734e-18" mesh="v2_leglink1_inner_screws" material="v2_leglink1_inner_screws_material"/>
@@ -247,7 +247,7 @@
           <!-- Frame closing_leg2_c_joint_2 -->
           <site group="3" name="closing_leg2_c_joint_2" pos="-0.00930745 -0.070216 -0.003" quat="1.0973e-15 -0.0658455 -0.99783 -2.27541e-15"/>
           <!-- Frame closing_leg2_c_joint_2_z -->
-          <site group="3" name="closing_leg2_c_joint_2_z" pos="-0.00930745 -0.070216 -0.103" quat="1.0973e-15 -0.0658455 -0.99783 -2.27541e-15"/>
+          <site group="3" name="closing_leg2_c_joint_2_z" pos="-0.00930745 -0.070216 -0.10736" quat="1.0973e-15 -0.0658455 -0.99783 -2.27541e-15"/>
         </body>
       </body>
       <!-- Link v2_leglink1_inner_screws_4 -->
@@ -273,8 +273,8 @@
           <geom type="mesh" class="visual" pos="-0.00465373 0.035108 7.84095e-16" quat="0.465992 -0.465992 -0.531838 0.531838" mesh="leglink2_v2_with_leg_down" material="leglink2_v2_with_leg_down_material"/>
           <geom type="mesh" class="collision" pos="-0.00465373 0.035108 7.84095e-16" quat="0.465992 -0.465992 -0.531838 0.531838" mesh="leglink2_v2_with_leg_down" material="leglink2_v2_with_leg_down_material"/>
           <!-- Part foot_2 -->
-          <geom type="mesh" class="visual" pos="-0.0190339 0.0827042 -0.0015" quat="0.313026 -0.634046 -0.313026 -0.634046" mesh="foot" material="foot_material"/>
-          <geom type="mesh" class="collision" pos="-0.0190339 0.0827042 -0.0015" quat="0.313026 -0.634046 -0.313026 -0.634046" mesh="foot" material="foot_material"/>
+          <geom type="mesh" class="visual" pos="-0.0190339 0.08620 -0.0015" quat="0.313026 -0.634046 -0.313026 -0.634046" mesh="foot" material="foot_material"/>
+          <geom type="mesh" class="collision" pos="-0.0190339 0.08620 -0.0015" quat="0.313026 -0.634046 -0.313026 -0.634046" mesh="foot" material="foot_material"/>
           <!-- Part 7487n16_precision_stainless_steel_ball_bearing_25 -->
           <geom type="mesh" class="visual" pos="-0.00930745 0.070216 -0.0015" quat="3.67261e-16 0.908147 0.418651 1.13588e-15" mesh="7487n16_precision_stainless_steel_ball_bearing" material="7487n16_precision_stainless_steel_ball_bearing_material"/>
           <geom type="mesh" class="collision" pos="-0.00930745 0.070216 -0.0015" quat="3.67261e-16 0.908147 0.418651 1.13588e-15" mesh="7487n16_precision_stainless_steel_ball_bearing" material="7487n16_precision_stainless_steel_ball_bearing_material"/>
@@ -290,7 +290,7 @@
           <!-- Frame closing_leg2_c_joint_1 -->
           <site group="3" name="closing_leg2_c_joint_1" pos="-0.00930745 0.070216 -0.003" quat="9.92769e-16 0.659012 0.752132 2.45901e-15"/>
           <!-- Frame closing_leg2_c_joint_1_z -->
-          <site group="3" name="closing_leg2_c_joint_1_z" pos="-0.00930745 0.070216 -0.103" quat="9.92769e-16 0.659012 0.752132 2.45901e-15"/>
+          <site group="3" name="closing_leg2_c_joint_1_z" pos="-0.00930745 0.070216 -0.10736" quat="9.92769e-16 0.659012 0.752132 2.45901e-15"/>
         </body>
       </body>
       <!-- Link v2_leglink1_inner_screws_5 -->
@@ -339,7 +339,7 @@
           <!-- Frame closing_leg3_c_joint_2 -->
           <site group="3" name="closing_leg3_c_joint_2" pos="-0.0698359 0.0118265 -0.003" quat="2.44195e-13 -0.996484 0.0837797 2.3574e-13"/>
           <!-- Frame closing_leg3_c_joint_2_z -->
-          <site group="3" name="closing_leg3_c_joint_2_z" pos="-0.0698359 0.0118265 -0.103" quat="2.44195e-13 -0.996484 0.0837797 2.3574e-13"/>
+          <site group="3" name="closing_leg3_c_joint_2_z" pos="-0.0698359 0.0118265 -0.10736" quat="2.44195e-13 -0.996484 0.0837797 2.3574e-13"/>
         </body>
       </body>
       <!-- Link v2_leglink1_inner_screws_6 -->
@@ -382,7 +382,7 @@
           <!-- Frame closing_leg3_c_joint_1 -->
           <site group="3" name="closing_leg3_c_joint_1" pos="0.0708302 -4.16334e-17 -0.003" quat="0 1 0 0"/>
           <!-- Frame closing_leg3_c_joint_1_z -->
-          <site group="3" name="closing_leg3_c_joint_1_z" pos="0.0708302 -4.16334e-17 -0.103" quat="0 1 0 0"/>
+          <site group="3" name="closing_leg3_c_joint_1_z" pos="0.0708302 -4.16334e-17 -0.10736" quat="0 1 0 0"/>
         </body>
       </body>
       <!-- Link v2_leglink1_inner_screws_7 -->
@@ -431,7 +431,7 @@
           <!-- Frame closing_leg4_c_joint_2 -->
           <site group="3" name="closing_leg4_c_joint_2" pos="-0.0703557 0.00818491 -0.003" quat="4.66385e-16 0.664997 -0.746846 -1.30422e-15"/>
           <!-- Frame closing_leg4_c_joint_2_z -->
-          <site group="3" name="closing_leg4_c_joint_2_z" pos="-0.0703557 0.00818491 -0.103" quat="4.66385e-16 0.664997 -0.746846 -1.30422e-15"/>
+          <site group="3" name="closing_leg4_c_joint_2_z" pos="-0.0703557 0.00818491 -0.10736" quat="4.66385e-16 0.664997 -0.746846 -1.30422e-15"/>
         </body>
       </body>
       <!-- Link v2_leglink1_inner_screws_8 -->
@@ -474,7 +474,7 @@
           <!-- Frame closing_leg4_c_joint_1 -->
           <site group="3" name="closing_leg4_c_joint_1" pos="0.0708302 0 -0.003" quat="0 1 0 0"/>
           <!-- Frame closing_leg4_c_joint_1_z -->
-          <site group="3" name="closing_leg4_c_joint_1_z" pos="0.0708302 1.38778e-17 -0.103" quat="0 1 0 0"/>
+          <site group="3" name="closing_leg4_c_joint_1_z" pos="0.0708302 1.38778e-17 -0.10736" quat="0 1 0 0"/>
         </body>
       </body>
     </body>
